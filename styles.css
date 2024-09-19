@@ -1,0 +1,210 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Глобальные стили для фона с градиентом */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0078d7, #005a9e, #28c0f0);
+    background-size: 200% 200%;
+    animation: gradientShift 20s ease infinite;
+    color: #333;
+    overflow-x: hidden;
+    background: url('Imgs/windows-12-bg.png') no-repeat center center/cover;
+}
+
+
+/* Анимация изменения градиента */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Hero секция с параллаксом */
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('windows-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.hero-content {
+    text-align: center;
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin: 20px 0;
+    color: #dcdcdc;
+    opacity: 0.8;
+}
+
+.hero-content .btn {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #0078d7, #005a9e);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content .btn:hover {
+    background: linear-gradient(135deg, #006ab6, #004a7d);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Секция с функциями */
+#features {
+    padding: 80px 20px;
+    background-color: #043e71;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #0078d7;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(240, 240, 240, 0.9));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    text-align: center;
+    padding: 40px;
+    width: 30%;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 50px rgba(0, 0, 0, 0.2);
+}
+
+.feature img {
+    width: 120px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.feature h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.feature:hover img {
+    transform: scale(1.5);
+}
+
+/* Плавная анимация появления элементов */
+.feature {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.feature.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    padding: 40px;
+    background-color: #0f758a;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Keyframes для анимаций */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Кнопка "Скачать" внизу страницы */
+footer .btn-download {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #0078d7, #005a9e);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+footer .btn-download:hover {
+    background: linear-gradient(135deg, #006ab6, #004a7d);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
