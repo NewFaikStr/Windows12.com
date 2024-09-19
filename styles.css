@@ -10,7 +10,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #0078d7, #005a9e, #28c0f0);
     background-size: 200% 200%;
-    animation: gradientShift 20s ease infinite;
+    animation: gradientShift 30s ease infinite;
     color: #333;
     overflow-x: hidden;
     background: url('./windows-12-bg.png') no-repeat center center/cover;
